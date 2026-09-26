@@ -1,0 +1,9 @@
+enforce_dependencies: true
+enforce_privacy: false
+dependencies:
+  - packages/shared_kernel
+  - packages/booth
+  - packages/performance
+  - packages/appreciation
+  - packages/presence
+  - packages/room
