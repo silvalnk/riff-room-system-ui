@@ -1,0 +1,12 @@
+<div id="room_floor" class="floor-lights relative flex min-h-0 flex-1 items-end gap-7 overflow-x-auto rounded-3xl border border-white/10 px-6 pb-6 pt-14 shadow-[inset_0_0_80px_rgba(0,0,0,0.35)]">
+  <p class="pointer-events-none absolute left-5 top-4 m-0 text-[0.68rem] uppercase tracking-[0.22em] text-white/55">Pista</p>
+  <% if snapshot[:listeners].empty? %>
+    <p class="m-0 text-sm text-stone-400">A pista está vazia. Entre para aparecer aqui.</p>
+  <% end %>
+  <% snapshot[:listeners].each do |person| %>
+    <figure class="m-0 w-[5.2rem] text-center <%= "origin-bottom animate-[dance_0.38s_ease-in-out_infinite]" if person[:dancing] && snapshot[:phase] == "playing" %>">
+      <%= room_avatar(person[:name]) %>
+      <figcaption class="mt-1 text-xs text-stone-400"><%= person[:name] %></figcaption>
+    </figure>
+  <% end %>
+</div>
