@@ -1,0 +1,29 @@
+<div id="room_chrome" class="flex flex-col overflow-auto rounded-3xl border border-white/10 bg-zinc-950/75 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md lg:col-start-2 lg:row-span-3 lg:row-start-1">
+  <p class="mb-2 mt-0 text-[0.68rem] uppercase tracking-[0.2em] text-stone-500">Cabine</p>
+  <div class="flex items-center gap-3 rounded-2xl bg-white/5 p-3">
+    <%= room_avatar(snapshot[:dj_name] || "?", size: :dj) %>
+    <div class="min-w-0">
+      <strong class="block truncate"><%= snapshot[:dj_name] || "Cabine livre" %></strong>
+      <p class="m-0 text-sm text-stone-400">Erros <%= snapshot[:streak] %> seguidos · <%= snapshot[:total_misses] %> no turno</p>
+    </div>
+  </div>
+  <p class="mb-1 mt-5 text-[0.68rem] uppercase tracking-[0.2em] text-stone-500">Fila</p>
+  <ol class="m-0 list-none p-0">
+    <% if snapshot[:queue].empty? %>
+      <li class="border-b border-white/10 py-2 text-stone-400">Ninguém esperando</li>
+    <% end %>
+    <% snapshot[:queue].each_with_index do |item, index| %>
+      <li class="flex gap-2 border-b border-white/10 py-2"><em class="text-stone-500"><%= index + 1 %></em> <span class="truncate"><%= item[:name] %></span></li>
+    <% end %>
+  </ol>
+  <div class="mt-auto grid grid-cols-2 gap-2 pt-5 text-sm">
+    <div class="rounded-2xl bg-emerald-500/10 px-3 py-3 text-emerald-300">
+      <p class="m-0 text-2xl font-semibold leading-none"><%= snapshot[:ups] %></p>
+      <p class="mb-0 mt-1 text-[0.68rem] uppercase tracking-[0.14em]">Gostei</p>
+    </div>
+    <div class="rounded-2xl bg-rose-500/10 px-3 py-3 text-rose-200">
+      <p class="m-0 text-2xl font-semibold leading-none"><%= snapshot[:downs] %></p>
+      <p class="mb-0 mt-1 text-[0.68rem] uppercase tracking-[0.14em]">Não gostei</p>
+    </div>
+  </div>
+</div>
