@@ -5,7 +5,7 @@
 > Uma pessoa fica em uma sala só. Voto e dança só valem com música no ar.
 > Spec-Driven. O spec vivo está em [`openspec/specs/room/spec.md`](openspec/specs/room/spec.md).
 
-![Sala After Hours: vídeo, notas, pista e cabine](docs/images/sala.jpg)
+![Sala After Hours: vídeo, notas, pista e cabine](docs/images/after-hours.jpg)
 
 | | |
 |--|--|
@@ -27,7 +27,7 @@
 | [`docs/c4/`](docs/c4/) | Contexto, containers, componentes |
 | [`docs/rfc/`](docs/rfc/) | Porquês |
 | [`docs/runbook.md`](docs/runbook.md) | Como operar |
-| [`docs/images/sala.jpg`](docs/images/sala.jpg) | Print da sala |
+| [`docs/images/after-hours.jpg`](docs/images/after-hours.jpg) | Print da sala |
 | [`LICENSE`](LICENSE) | MIT (código) |
 
 Se código e spec divergirem, a **spec manda**.
@@ -77,7 +77,7 @@ riff_room_system_ui/
   LICENSE
   openspec/specs/room/spec.md
   docs/prd.md trd.md engineering.md runbook.md
-  docs/c4/ docs/rfc/ docs/images/sala.jpg
+  docs/c4/ docs/rfc/ docs/images/after-hours.jpg
   packages/booth presence performance appreciation room shared_kernel
   app/views app/javascript
   spec/
