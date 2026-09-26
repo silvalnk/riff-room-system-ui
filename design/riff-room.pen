@@ -1,0 +1,10 @@
+{
+  "name": "riff-room",
+  "frames": [
+    {
+      "name": "Sala",
+      "background": "#07070b",
+      "layers": ["youtube-fullscreen", "letter-canvas", "chrome-right"]
+    }
+  ]
+}
