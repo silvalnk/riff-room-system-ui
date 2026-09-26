@@ -1,0 +1,7 @@
+---
+description: Domain packages stay free of Rails
+globs: packages/**/lib/{domain,application}/**/*.rb
+alwaysApply: false
+---
+
+Code under `packages/*/lib/domain` and `packages/*/lib/application` does not require Rails, ActiveRecord, ActionCable, or Turbo. ActiveRecord stays in `packages/*/lib/infrastructure`. Controllers talk to `RoomGateway` only.
