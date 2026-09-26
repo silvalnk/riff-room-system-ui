@@ -1,6 +1,6 @@
 # Riff Room
 
-> Sala no estilo plug.dj em **Ruby on Rails + Hotwire**.
+> Sala ao vivo em **Ruby on Rails + Hotwire**.
 > O clipe oficial do YouTube fica na tela. Letras `A S D F G` caem para o DJ.
 > Uma pessoa fica em uma sala só. Voto e dança só valem com música no ar.
 > Spec-Driven. O spec vivo está em [`openspec/specs/room/spec.md`](openspec/specs/room/spec.md).
