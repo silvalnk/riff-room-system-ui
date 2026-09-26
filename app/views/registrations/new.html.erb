@@ -1,0 +1,18 @@
+<section class="mx-auto flex min-h-dvh w-full max-w-md flex-col justify-center px-6">
+  <p class="m-0 text-xs uppercase tracking-[0.22em] text-sky-300">Riff Room</p>
+  <h1 class="mb-6 mt-2 text-3xl font-semibold">Criar conta</h1>
+  <%= form_with model: @user, url: registration_path, class: "flex flex-col gap-3" do |form| %>
+    <% if @user.errors.any? %>
+      <ul class="m-0 list-disc pl-5 text-sm text-rose-300">
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <%= form.text_field :display_name, required: true, placeholder: "Nome do perfil", class: "rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-stone-100" %>
+    <%= form.email_field :email_address, required: true, autocomplete: "username", placeholder: "E-mail", class: "rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-stone-100" %>
+    <%= form.password_field :password, required: true, autocomplete: "new-password", placeholder: "Senha", maxlength: 72, class: "rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-stone-100" %>
+    <%= form.password_field :password_confirmation, required: true, autocomplete: "new-password", placeholder: "Confirmar senha", maxlength: 72, class: "rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-stone-100" %>
+    <%= form.submit "Criar conta", class: "cursor-pointer rounded-full border-0 bg-sky-500 px-4 py-2 font-semibold text-white" %>
+  <% end %>
+</section>
