@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "build:ts": "tsc --pretty false"
+  },
+  "devDependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "typescript": "~5.9.2"
+  }
+}
