@@ -1,0 +1,12 @@
+<section class="mx-auto flex min-h-dvh w-full max-w-md flex-col justify-center px-6">
+  <p class="m-0 text-xs uppercase tracking-[0.22em] text-sky-300">Riff Room</p>
+  <h1 class="mb-6 mt-2 text-3xl font-semibold">Entrar</h1>
+  <% if flash[:alert] %><p class="text-rose-300"><%= flash[:alert] %></p><% end %>
+  <% if flash[:notice] %><p class="text-emerald-300"><%= flash[:notice] %></p><% end %>
+  <%= form_with url: session_path, class: "flex flex-col gap-3" do |form| %>
+    <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "E-mail", value: params[:email_address], class: "rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-stone-100" %>
+    <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: "Senha", maxlength: 72, class: "rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-stone-100" %>
+    <%= form.submit "Entrar", class: "cursor-pointer rounded-full border-0 bg-sky-500 px-4 py-2 font-semibold text-white" %>
+  <% end %>
+  <%= link_to "Esqueci a senha", new_password_path, class: "mt-4 text-sm text-stone-400" %>
+</section>
