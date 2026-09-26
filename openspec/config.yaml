@@ -1,5 +1,5 @@
 schema: spec-driven
 context: |
-  riff_room é uma sala plug.dj em Rails 8. O vídeo do YouTube é o fundo.
+  riff_room é uma sala ao vivo em Rails 8. O vídeo do YouTube é o fundo.
   Letras A S D F G caem a cada 800 ms. Só o DJ as aperta.
   Três erros seguidos ou oito no turno passam a vez. Voto não pula o DJ.
