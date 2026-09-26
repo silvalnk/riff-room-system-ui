@@ -1,0 +1,9 @@
+<%= turbo_stream.replace "room_state" do %>
+  <%= render "rooms/state", snapshot: @snapshot %>
+<% end %>
+<%= turbo_stream.replace "room_chrome" do %>
+  <%= render "rooms/chrome", snapshot: @snapshot %>
+<% end %>
+<%= turbo_stream.replace "room_floor" do %>
+  <%= render "rooms/floor", snapshot: @snapshot %>
+<% end %>
