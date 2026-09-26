@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "rootDir": "app/javascript",
+    "outDir": "app/assets/builds",
+    "baseUrl": ".",
+    "paths": {
+      "room_clock": ["app/javascript/room_clock.ts"],
+      "controllers": ["app/javascript/controllers/index.ts"],
+      "controllers/*": ["app/javascript/controllers/*"]
+    },
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": []
+  },
+  "include": ["app/javascript"]
+}
