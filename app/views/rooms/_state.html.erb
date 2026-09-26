@@ -1,0 +1,12 @@
+<div id="room_state" class="hidden"
+     data-video-id="<%= snapshot[:video_id] %>"
+     data-started-at="<%= snapshot[:started_at_ms] %>"
+     data-server-now="<%= snapshot[:server_now_ms] %>"
+     data-playback="<%= snapshot[:playback_ms] %>"
+     data-seed="<%= snapshot[:seed] %>"
+     data-next-index="<%= snapshot[:next_note_index] %>"
+     data-dj-id="<%= snapshot[:dj_id] %>"
+     data-phase="<%= snapshot[:phase] %>"
+     data-hits="<%= snapshot[:hits].to_json %>"
+     data-last-event="<%= snapshot[:last_event] %>"
+     data-failed-name="<%= snapshot[:failed_name] %>"></div>
