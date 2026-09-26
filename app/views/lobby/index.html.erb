@@ -1,0 +1,27 @@
+<main class="min-h-dvh bg-[radial-gradient(circle_at_top,#1a2344,#09080c_55%)] px-6 py-10 sm:px-12">
+  <header class="flex flex-wrap items-end justify-between gap-6">
+    <div>
+      <p class="m-0 text-xs uppercase tracking-[0.22em] text-sky-300">Riff Room</p>
+      <h1 class="mb-1 mt-2 text-4xl font-semibold">Salas no ar</h1>
+      <p class="m-0 text-stone-400">Entre para ouvir. Com conta, você entra na fila e vira DJ.</p>
+    </div>
+    <nav class="flex items-center gap-3">
+      <% if authenticated? %>
+        <span><%= Current.user.display_name %></span>
+        <%= button_to "Sair", session_path, method: :delete, form_class: "inline-flex", class: "cursor-pointer rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-sm" %>
+      <% else %>
+        <%= link_to "Entrar", new_session_path, class: "text-stone-100 no-underline" %>
+        <%= link_to "Criar conta", new_registration_path, class: "rounded-full bg-sky-500 px-4 py-2 font-semibold text-white no-underline hover:bg-sky-400" %>
+      <% end %>
+    </nav>
+  </header>
+  <section class="mt-10 grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4">
+    <% @rooms.each do |room| %>
+      <%= link_to room, class: "block min-h-48 rounded-2xl border border-white/10 bg-gradient-to-br from-slate-800/90 to-zinc-950/90 p-5 text-stone-100 no-underline transition hover:-translate-y-1 hover:border-white/25" do %>
+        <h2 class="m-0 text-2xl font-semibold normal-case tracking-normal"><%= room.name %></h2>
+        <p class="text-stone-300"><%= room.blurb %></p>
+        <p class="text-emerald-300"><%= room.playing? ? room.dj&.display_name || "No ar" : "Cabine livre" %></p>
+      <% end %>
+    <% end %>
+  </section>
+</main>
